@@ -1,11 +1,19 @@
 # flask-chatterbot
 
+
+```
+git clone https://github.com/adilkhan49/flask-chatterbot.git  
+cd flask-chatterbox
+docker build -t chatter .
+docker run -p 80:80 chatter
+```
+
 #### A web implementation of [ChatterBot](https://github.com/gunthercox/ChatterBot) using Flask.
 
 ## Local Setup:
  1. Ensure that Python, Flask, SQLAlchemy, and ChatterBot are installed (either manually, or run `pip install -r requirements.txt`).
  2. Run *app.py* with `python app.py`.
- 3. The demo will be live at [http://localhost:5000/](http://localhost:5000/)
+ 3. The demo will be live at [http://localhost:80/](http://localhost:80/)
 
 ## How do I deploy this to a web server?
 If you do not have a dedicated server, I highly recommend using [PythonAnywhere](https://www.pythonanywhere.com/), [AWS](https://aws.amazon.com/getting-started/projects/deploy-python-application/) or [Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) to host your application.

@@ -10,13 +10,14 @@ trainer.train("chatterbot.corpus.english")
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    return "Welcome to chatterbot!"
 
-@app.route("/get")
-def get_bot_response():
-    userText = request.args.get('msg')
-    return str(english_bot.get_response(userText))
+@app.route("/<msg>")
+def get_bot_response(msg):
+#    userText = request.args.get('msg')
+ 	userText = msg
+ 	return str(english_bot.get_response(userText))
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=80)
